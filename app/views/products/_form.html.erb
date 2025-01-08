@@ -2,8 +2,11 @@
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
+    <div>
+      <%= form.label :description, style: "display: block" %>
+      <%= form.rich_text_area :description %>
+    </div>
   </div>
-
   <div>
     <%= form.submit %>
   </div>
