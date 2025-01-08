@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "unsubscribes/show"
   get "subscriber/create"
   resource :session
   resources :passwords, param: :token
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   resources :products do
     resource :subscribers, only: [ :create ]
   end
+
+  resource :unsubscribe, only: [ :show ]
   # Defines the root path route ("/")
   root "products#index"
 end
