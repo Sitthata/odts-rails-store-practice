@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
       redirect_to @product, notice: "Thank you for your review!"
     else
       flash[:alert] = "Unable to add review"
+      render "product/show"
     end
   end
 
