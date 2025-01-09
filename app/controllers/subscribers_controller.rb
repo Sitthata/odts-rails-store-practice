@@ -1,4 +1,4 @@
-class SubscriberController < ApplicationController
+class SubscribersController < ApplicationController
   allow_unauthenticated_access
   before_action :set_product
   def create
@@ -11,7 +11,7 @@ class SubscriberController < ApplicationController
     @product = Product.find(params[:product_id])
   end
 
-  def subscriber_param
-    params.expect(subscriber: [ :email ])
+  def subscriber_params
+    params.require(subscriber: [ :email ])
   end
 end
