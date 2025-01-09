@@ -1,0 +1,20 @@
+<h2>Reviews</h2>
+
+<% if product.reviews.any? %>
+  <ul>
+    <% product.reviews.each do |review| %>
+      <li>
+        <strong>Rating:</strong>
+        <%= review.rating %>
+        <strong>Comment:</strong> <%= review.comment %><br>
+        <% if review.user %>
+          <em>— <%= review.user.name %></em>
+        <% else %>
+          <em>— Anonymous</em>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No reviews yet. Be the first to review this product!</p>
+<% end %>
