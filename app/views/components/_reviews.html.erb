@@ -8,7 +8,7 @@
         <%= review.rating %>
         <strong>Comment:</strong> <%= review.comment %><br>
         <% if review.user %>
-          <em>— <%= review.user.name %></em>
+          <em>— <%= review.user.email_address %></em>
         <% else %>
           <em>— Anonymous</em>
         <% end %>

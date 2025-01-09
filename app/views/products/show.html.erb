@@ -4,9 +4,10 @@
     <section class="product-info">
       <h1><%= @product.name %></h1>
       <p><%= @product.description %></p>
-      <%= render "inventory", product: @product %>
+      
     </section>
   <% end %>
+  <%= render 'reviews/form' %>
   <%= render 'components/reviews', product: @product %>
 </section>
 
